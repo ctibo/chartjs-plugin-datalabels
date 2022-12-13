@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "dist/chartjs-plugin-datalabels.js",
   "module": "dist/chartjs-plugin-datalabels.esm.js",
-  "types": "types/index.d.ts",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/chartjs/chartjs-plugin-datalabels.git"
@@ -16,11 +16,16 @@
     "plugin",
     "label"
   ],
+  "types": "types/index.d.ts",
   "files": [
     "bower.json",
     "dist/*.js",
     "types/*.d.ts"
   ],
+  "exports": {
+    "types": "./types/index.d.ts",
+    "import": "./dist/chartjs-plugin-datalabels.esm.js"
+  },
   "scripts": {
     "bower": "node scripts/create-bower-json",
     "build": "rollup -c",
